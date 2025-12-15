@@ -1,14 +1,19 @@
 package com.github.diegolins10.clientapi.application.usecases;
 
-import com.github.diegolins10.clientapi.domain.entities.Client;
-import com.github.diegolins10.clientapi.domain.repositories.ClientRepository;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.mockito.ArgumentCaptor;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.*;
+import org.mockito.Mockito;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import com.github.diegolins10.clientapi.api.dto.CreateClientRequest;
+import com.github.diegolins10.clientapi.application.common.Result;
+import com.github.diegolins10.clientapi.domain.entities.Client;
+import com.github.diegolins10.clientapi.domain.repositories.ClientRepository;
 
 class CreateClientUseCaseTest {
 
@@ -23,15 +28,41 @@ class CreateClientUseCaseTest {
 
     @Test
     void shouldCreateClientSuccessfully() {
-        Client client = new Client(null, "Diego", "Lins", "diego@email.com", "123456789");
-        Client savedClient = new Client(1L, "Diego", "Lins", "diego@email.com", "123456789");
+        CreateClientRequest request = new CreateClientRequest(
+                null,
+                "Diego",
+                "Lins",
+                "diego@email.com",
+                "123456789",
+                "08132470"
+        );
 
-        when(clientRepository.save(any(Client.class))).thenReturn(savedClient);
+        Client savedClient = new Client(
+                1L,
+                "Diego",
+                "Lins",
+                "diego@email.com",
+                "123456789",
+                "08132470"
+        );
 
-        Client result = createClientUseCase.execute(client);
+        when(clientRepository.save(any(Client.class)))
+                .thenReturn(savedClient);
 
-        assertEquals(1L, result.getId());
-        assertEquals("Diego", result.getFirstName());
-        verify(clientRepository, times(1)).save(client);
+        Result<Client> result = createClientUseCase.execute(request);
+
+        assertTrue(result.isSuccess());
+        assertEquals(1L, result.getData().getId());
+
+        ArgumentCaptor<Client> captor = ArgumentCaptor.forClass(Client.class);
+        verify(clientRepository).save(captor.capture());
+
+        Client clientPassed = captor.getValue();
+        assertEquals("Diego", clientPassed.getFirstName());
+        assertEquals("Lins", clientPassed.getLastName());
+        assertEquals("diego@email.com", clientPassed.getEmail());
+        assertEquals("123456789", clientPassed.getPhone());
+        assertEquals("08132470", clientPassed.getCep());
     }
+
 }

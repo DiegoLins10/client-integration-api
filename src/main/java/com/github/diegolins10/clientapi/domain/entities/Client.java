@@ -31,4 +31,31 @@ public class Client {
     private String email;
 
     private String phone;
+
+    private String cep;
+
+    private String logradouro;
+
+    private String bairro;
+
+    private String cidade;
+
+    private String estado;
+
+    public Client(
+            Long id,
+            String firstName,
+            String lastName,
+            String email,
+            String phone,
+            String cep
+    ) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phone = phone;
+        this.cep = cep;
+    }
+
 }
