@@ -195,7 +195,7 @@ mvn test
 
 * [x] 🎯 **Adicionar Result Pattern** para retorno consistente de sucesso ou falha nas operações.
 * [x] 🌐 **Adicionar RestResult** para padronização das respostas HTTP da API.
-* [ ] 🔄 **Implementar middleware / interceptadores** para logs, tratamento de erros unificado e validações globais.
+* [x] 🔄 **Implementar middleware / interceptadores** para logs, tratamento de erros unificado e validações globais.
 * [ ] 🏠 **Integrar API do ViaCEP** para preencher e validar endereços automaticamente ao criar ou atualizar clientes.
   Fonte: [ViaCEP - API](https://viacep.com.br/)
 * [ ] 🔒 **Adicionar autenticação JWT** para proteger os endpoints da API.
