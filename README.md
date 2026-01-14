@@ -204,6 +204,7 @@ mvn test
 * [ ] 🧪 **Adicionar testes de integração** que validem fluxos completos da API.
 * [ ] ✅ **Adicionar validações avançadas de campos** como email, telefone e CPF.
 * [ ] 🔀 **Implementar mapeamento DTO ↔ Entity com MapStruct** para reduzir boilerplate.
+* [ ] 🔀 **Implementar uma autenticação de dois fatores para a confirmação do email.
 
 ### ***Indicadores de Conclusão***
 
