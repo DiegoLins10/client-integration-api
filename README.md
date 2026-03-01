@@ -242,7 +242,7 @@ mvn spring-boot:run
 
 * O projeto segue o **padrão Clean Architecture**, com camadas separadas para **domínio**, **aplicação**, **infraestrutura** e **interfaces**.
 * Banco H2 é **volátil** (dados desaparecem ao parar a aplicação). Para produção, substituir por **PostgreSQL** ou outro banco relacional.
-* Swagger/OpenAPI is implemented and available at `/swagger-ui/index.html` and `/v3/api-docs`; JWT authentication remains a future improvement.
+* Swagger/OpenAPI j? est? implementado e dispon?vel em `/swagger-ui/index.html` e `/v3/api-docs`; autentica??o JWT permanece como melhoria futura.
 
 ---
 
