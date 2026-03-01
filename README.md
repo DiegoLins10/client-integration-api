@@ -191,6 +191,31 @@ mvn test
 
 ---
 
+
+## Documentação da API
+
+### Como rodar o projeto
+
+```bash
+mvn clean install
+mvn spring-boot:run
+```
+
+### URLs de documentação
+
+- Swagger UI: `http://localhost:8080/swagger-ui/index.html`
+- Swagger UI (atalho): `http://localhost:8080/swagger-ui.html`
+- OpenAPI JSON: `http://localhost:8080/v3/api-docs`
+
+### Dependência adicionada
+
+- `org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.13`
+
+### Observações
+
+- Porta padrão da aplicação: `8080`
+- Perfil Spring: configuração padrão de `src/main/resources/application.properties` (sem perfil explícito)
+
 ### 🚀 Próximos Passos
 
 * [x] 🎯 **Adicionar Result Pattern** para retorno consistente de sucesso ou falha nas operações.
@@ -199,7 +224,7 @@ mvn test
 * [ ] 🏠 **Integrar API do ViaCEP** para preencher e validar endereços automaticamente ao criar ou atualizar clientes.
   Fonte: [ViaCEP - API](https://viacep.com.br/)
 * [ ] 🔒 **Adicionar autenticação JWT** para proteger os endpoints da API.
-* [ ] 📑 **Documentar a API com Swagger / OpenAPI** para facilitar testes e integração com outros sistemas.
+* [x] 📑 **Documentar a API com Swagger / OpenAPI** para facilitar testes e integração com outros sistemas.
 * [ ] 🐘 **Substituir H2 por PostgreSQL** ou outro banco relacional para persistência em produção.
 * [ ] 🧪 **Adicionar testes de integração** que validem fluxos completos da API.
 * [ ] ✅ **Adicionar validações avançadas de campos** como email, telefone e CPF.
@@ -225,26 +250,3 @@ mvn test
 
 ---
 
-## Documentação da API
-
-### Como rodar o projeto
-
-```bash
-mvn clean install
-mvn spring-boot:run
-```
-
-### URLs de documentação
-
-- Swagger UI: `http://localhost:8080/swagger-ui/index.html`
-- Swagger UI (atalho): `http://localhost:8080/swagger-ui.html`
-- OpenAPI JSON: `http://localhost:8080/v3/api-docs`
-
-### Dependência adicionada
-
-- `org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.13`
-
-### Observações
-
-- Porta padrão da aplicação: `8080`
-- Perfil Spring: configuração padrão de `src/main/resources/application.properties` (sem perfil explícito)
