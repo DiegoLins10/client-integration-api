@@ -156,7 +156,14 @@ mvn clean install
 mvn spring-boot:run
 ```
 
-4. Acesse a API em:
+4. Documentação Swagger/OpenAPI disponível em:
+
+```
+http://localhost:8080/swagger-ui.html
+http://localhost:8080/api-docs
+```
+
+5. Acesse a API em:
 
 ```
 http://localhost:8080/api/clientes
@@ -199,7 +206,7 @@ mvn test
 * [ ] 🏠 **Integrar API do ViaCEP** para preencher e validar endereços automaticamente ao criar ou atualizar clientes.
   Fonte: [ViaCEP - API](https://viacep.com.br/)
 * [ ] 🔒 **Adicionar autenticação JWT** para proteger os endpoints da API.
-* [ ] 📑 **Documentar a API com Swagger / OpenAPI** para facilitar testes e integração com outros sistemas.
+* [x] 📑 **Documentar a API com Swagger / OpenAPI** para facilitar testes e integração com outros sistemas.
 * [ ] 🐘 **Substituir H2 por PostgreSQL** ou outro banco relacional para persistência em produção.
 * [ ] 🧪 **Adicionar testes de integração** que validem fluxos completos da API.
 * [ ] ✅ **Adicionar validações avançadas de campos** como email, telefone e CPF.
@@ -217,7 +224,7 @@ mvn test
 
 * O projeto segue o **padrão Clean Architecture**, com camadas separadas para **domínio**, **aplicação**, **infraestrutura** e **interfaces**.
 * Banco H2 é **volátil** (dados desaparecem ao parar a aplicação). Para produção, substituir por **PostgreSQL** ou outro banco relacional.
-* Preparado para **adicionar autenticação JWT** e **documentação Swagger/OpenAPI** futuramente. 🔐📑
+* Preparado para **adicionar autenticação JWT** e já conta com **documentação Swagger/OpenAPI** para facilitar integrações. 🔐📑
 
 ---
 
