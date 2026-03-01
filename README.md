@@ -199,7 +199,7 @@ mvn test
 * [ ] 🏠 **Integrar API do ViaCEP** para preencher e validar endereços automaticamente ao criar ou atualizar clientes.
   Fonte: [ViaCEP - API](https://viacep.com.br/)
 * [ ] 🔒 **Adicionar autenticação JWT** para proteger os endpoints da API.
-* [ ] 📑 **Documentar a API com Swagger / OpenAPI** para facilitar testes e integração com outros sistemas.
+* [x] 📑 **Documentar a API com Swagger / OpenAPI** para facilitar testes e integração com outros sistemas.
 * [ ] 🐘 **Substituir H2 por PostgreSQL** ou outro banco relacional para persistência em produção.
 * [ ] 🧪 **Adicionar testes de integração** que validem fluxos completos da API.
 * [ ] ✅ **Adicionar validações avançadas de campos** como email, telefone e CPF.
@@ -224,3 +224,12 @@ mvn test
 ✨ **by Diego Lins**
 
 ---
+
+## ?? Documenta��o Swagger / OpenAPI
+
+A documenta��o da API � gerada automaticamente com **springdoc-openapi**.
+
+- URL do Swagger UI (ambiente local): http://localhost:8080/swagger-ui.html
+- Esquema OpenAPI em JSON: http://localhost:8080/v3/api-docs
+
+Basta subir a aplica��o (mvn spring-boot:run) e acessar o Swagger UI para explorar e testar todos os endpoints da API diretamente pelo navegador.
