@@ -225,7 +225,7 @@ mvn test
 
 ---
 
-## Documentação da API
+## DocumentaÃ§Ã£o da API
 
 ### Como rodar o projeto
 
@@ -234,17 +234,17 @@ mvn clean install
 mvn spring-boot:run
 ```
 
-### URLs de documentação
+### URLs de documentaÃ§Ã£o
 
 - Swagger UI: `http://localhost:8080/swagger-ui/index.html`
 - Swagger UI (atalho): `http://localhost:8080/swagger-ui.html`
 - OpenAPI JSON: `http://localhost:8080/v3/api-docs`
 
-### Dependência adicionada
+### DependÃªncia adicionada
 
 - `org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.13`
 
-### Observações
+### ObservaÃ§Ãµes
 
-- Porta padrão da aplicação: `8080`
-- Perfil Spring: configuração padrão de `src/main/resources/application.properties` (sem perfil explícito)
+- Porta padrÃ£o da aplicaÃ§Ã£o: `8080`
+- Perfil Spring: configuraÃ§Ã£o padrÃ£o de `src/main/resources/application.properties` (sem perfil explÃ­cito)
