@@ -224,3 +224,27 @@ mvn test
 âœ¨ **by Diego Lins**
 
 ---
+
+## Documentação da API
+
+### Como rodar o projeto
+
+```bash
+mvn clean install
+mvn spring-boot:run
+```
+
+### URLs de documentação
+
+- Swagger UI: `http://localhost:8080/swagger-ui/index.html`
+- Swagger UI (atalho): `http://localhost:8080/swagger-ui.html`
+- OpenAPI JSON: `http://localhost:8080/v3/api-docs`
+
+### Dependência adicionada
+
+- `org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.13`
+
+### Observações
+
+- Porta padrão da aplicação: `8080`
+- Perfil Spring: configuração padrão de `src/main/resources/application.properties` (sem perfil explícito)
